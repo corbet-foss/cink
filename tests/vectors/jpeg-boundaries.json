@@ -1,0 +1,72 @@
+[
+  {
+    "name": "jpeg SOF needs marker prefix",
+    "fn": "normalize",
+    "input": "/9jAAAsIAAEAAQEBEQA=",
+    "expected": null
+  },
+  {
+    "name": "jpeg SOF declares too little data",
+    "fn": "normalize",
+    "input": "/9j/wAACCAABAAEBAREA",
+    "expected": null
+  },
+  {
+    "name": "jpeg SOF declares unavailable data",
+    "fn": "normalize",
+    "input": "/9j/wAAgCAABAAEBAREA",
+    "expected": null
+  },
+  {
+    "name": "jpeg SOF component metadata is truncated",
+    "fn": "normalize",
+    "input": "/9j/wAALCAABAAEBARE=",
+    "expected": null
+  },
+  {
+    "name": "jpeg SOF zero components rejected",
+    "fn": "normalize",
+    "input": "/9j/wAALCAABAAEAAREA",
+    "expected": null
+  },
+  {
+    "name": "jpeg SOF component count must match length",
+    "fn": "normalize",
+    "input": "/9j/wAALCAABAAECAREA",
+    "expected": null
+  },
+  {
+    "name": "jpeg stuffed byte outside scan rejected",
+    "fn": "normalize",
+    "input": "/9j/AP/AAAsIAAEAAQEBEQA=",
+    "expected": null
+  },
+  {
+    "name": "jpeg restart outside scan rejected",
+    "fn": "normalize",
+    "input": "/9j/0P/AAAsIAAEAAQEBEQA=",
+    "expected": null
+  },
+  {
+    "name": "jpeg repeated SOI rejected",
+    "fn": "normalize",
+    "input": "/9j/2P/AAAsIAAEAAQEBEQA=",
+    "expected": null
+  },
+  {
+    "name": "jpeg segment length cannot overlap next marker",
+    "fn": "normalize",
+    "input": "/9j/4AAD/8AACwgAAQABAQERAA==",
+    "expected": null
+  },
+  {
+    "name": "jpeg fill bytes and TEM marker accepted",
+    "fn": "normalize",
+    "input": "/9j//wH/wAALCAABAAEBAREA",
+    "expected": {
+      "mime": "jpeg",
+      "width": 1,
+      "height": 1
+    }
+  }
+]

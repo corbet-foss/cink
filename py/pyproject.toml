@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cink"
+version = "0.2.0"
+description = "Handwritten signature image rendering for correspondence. Pixels, not signatures"
+readme = "README.md"
+license = "LGPL-3.0-only WITH LGPL-3.0-linking-exception"
+license-files = ["LICENSES/*"]
+requires-python = ">=3.10"
+keywords = ["i18n", "correspondence", "locale"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+
+
+[project.urls]
+Homepage = "https://github.com/corbet-labs/cink#readme"
+Repository = "https://github.com/corbet-labs/cink"
+Issues = "https://github.com/corbet-labs/cink/issues"
+
+[project.scripts]
+cink = "cink.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cink"]

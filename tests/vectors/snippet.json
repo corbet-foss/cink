@@ -1,0 +1,53 @@
+[
+  {
+    "name": "height only",
+    "fn": "image_snippet",
+    "path": "/signature.png",
+    "height_pt": 31.5,
+    "expected": "#image(\"/signature.png\", height: 31.5pt)"
+  },
+  {
+    "name": "clamped width emitted",
+    "fn": "image_snippet",
+    "path": "/signature.png",
+    "height_pt": 15.0,
+    "width_pt": 30.0,
+    "expected": "#image(\"/signature.png\", height: 15pt, width: 30pt)"
+  },
+  {
+    "name": "path quotes and backslashes escaped",
+    "fn": "image_snippet",
+    "path": "dir\\name\".png",
+    "height_pt": 20,
+    "expected": "#image(\"dir\\\\name\\\".png\", height: 20pt)"
+  },
+  {
+    "name": "path line breaks escaped",
+    "fn": "image_snippet",
+    "path": "line\nreturn\rtab\t.png",
+    "height_pt": 20,
+    "expected": "#image(\"line\\nreturn\\rtab\\t.png\", height: 20pt)"
+  },
+  {
+    "name": "path control characters escaped",
+    "fn": "image_snippet",
+    "path": "nul\u0000delc1.png",
+    "height_pt": 20,
+    "expected": "#image(\"nul\\u{0}del\\u{7f}c1\\u{85}.png\", height: 20pt)"
+  },
+  {
+    "name": "non-ascii path passes through",
+    "fn": "image_snippet",
+    "path": "Grüße/sig.png",
+    "height_pt": 20,
+    "expected": "#image(\"Grüße/sig.png\", height: 20pt)"
+  },
+  {
+    "name": "integer width emitted",
+    "fn": "image_snippet",
+    "path": "/s.png",
+    "height_pt": 10,
+    "width_pt": 20,
+    "expected": "#image(\"/s.png\", height: 10pt, width: 20pt)"
+  }
+]

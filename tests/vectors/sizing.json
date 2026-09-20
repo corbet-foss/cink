@@ -1,0 +1,18 @@
+[
+  { "name": "tiny raster fits", "fn": "exceeds_limits", "fixture": "pixel-1x1.png", "max_pixels": 1600, "expected": false },
+  { "name": "large raster exceeds", "fn": "exceeds_limits", "fixture": "rect-100x50.png", "max_pixels": 1600, "expected": true },
+  { "name": "exact budget fits", "fn": "exceeds_limits", "fixture": "square-4x4.png", "max_pixels": 16, "expected": false },
+  { "name": "svg never exceeds", "fn": "exceeds_limits", "fixture": "icon.svg", "max_pixels": 1, "expected": false },
+  { "name": "within budget scale is one", "fn": "scale_to_fit", "fixture": "square-4x4.png", "max_pixels": 16, "expected": 1.0 },
+  { "name": "quarter budget halves", "fn": "scale_to_fit", "fixture": "square-4x4.png", "max_pixels": 4, "expected": 0.5 },
+  { "name": "sixteenth budget quarters", "fn": "scale_to_fit", "fixture": "square-4x4.png", "max_pixels": 1, "expected": 0.25 },
+  { "name": "dimension-less scale is one", "fn": "scale_to_fit", "fixture": "icon.svg", "max_pixels": 1, "expected": 1.0 },
+  { "name": "square keeps aspect", "fn": "signature_size", "fixture": "square-4x4.png", "height_pt": 31.5, "expected": [31.5, 31.5] },
+  { "name": "wide keeps aspect", "fn": "signature_size", "fixture": "rect-100x50.png", "height_pt": 20.0, "expected": [40.0, 20.0] },
+  { "name": "max width clamps", "fn": "signature_size", "fixture": "rect-100x50.png", "height_pt": 20.0, "max_width_pt": 30.0, "expected": [30.0, 15.0] },
+  { "name": "loose max width is noop", "fn": "signature_size", "fixture": "rect-100x50.png", "height_pt": 20.0, "max_width_pt": 40.0, "expected": [40.0, 20.0] },
+  { "name": "dimension-less has no size", "fn": "signature_size", "fixture": "icon.svg", "height_pt": 31.5, "expected": null },
+  { "name": "zero budget exceeded", "fn": "exceeds_limits", "fixture": "pixel-1x1.png", "max_pixels": 0, "expected": true },
+  { "name": "quarter budget halves scale", "fn": "scale_to_fit", "fixture": "rect-100x50.png", "max_pixels": 1250, "expected": 0.5 },
+  { "name": "narrow clamp quarters", "fn": "signature_size", "fixture": "rect-100x50.png", "height_pt": 20.0, "max_width_pt": 10.0, "expected": [10.0, 5.0] }
+]

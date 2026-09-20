@@ -1,0 +1,62 @@
+[
+  {
+    "name": "png truncated IHDR after dimensions rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB",
+    "expected": null
+  },
+  {
+    "name": "png truncated IHDR before checksum rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAAA=",
+    "expected": null
+  },
+  {
+    "name": "png truncated IHDR checksum rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1M=",
+    "expected": null
+  },
+  {
+    "name": "png width exceeds PNG maximum rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUoAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  },
+  {
+    "name": "png zero bit depth rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAAIAAACQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  },
+  {
+    "name": "png unknown color type rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAEAAACQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  },
+  {
+    "name": "png invalid RGB bit depth rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABBAIAAACQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  },
+  {
+    "name": "png invalid compression rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIBAACQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  },
+  {
+    "name": "png invalid filter rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAQCQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  },
+  {
+    "name": "png invalid interlace rejected",
+    "fn": "normalize",
+    "input": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAAKQd1PeAAAADElEQVR4nGNoaGgAAAMEAYFL09IQAAAAAElFTkSuQmCC",
+    "expected": null
+  }
+]

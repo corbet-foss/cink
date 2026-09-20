@@ -1,0 +1,96 @@
+[
+  {
+    "name": "base64 complete groups need no padding",
+    "fn": "normalize",
+    "input": "PHN2Zy8+",
+    "expected": {
+      "mime": "svg",
+      "width": null,
+      "height": null
+    }
+  },
+  {
+    "name": "base64 required padding accepted",
+    "fn": "normalize",
+    "input": "PHN2ZyAvPg==",
+    "expected": {
+      "mime": "svg",
+      "width": null,
+      "height": null
+    }
+  },
+  {
+    "name": "base64 missing required padding rejected",
+    "fn": "normalize",
+    "input": "PHN2ZyAvPg",
+    "expected": null
+  },
+  {
+    "name": "base64 excess padding rejected",
+    "fn": "normalize",
+    "input": "PHN2ZyAvPg===",
+    "expected": null
+  },
+  {
+    "name": "base64 whitespace rejected",
+    "fn": "normalize",
+    "input": "PHN2\nZy8+",
+    "expected": null
+  },
+  {
+    "name": "base64 unused nonzero trailing bits rejected",
+    "fn": "normalize",
+    "input": "PHN2ZyAvPh==",
+    "expected": null
+  },
+  {
+    "name": "base64 data URL missing padding rejected",
+    "fn": "normalize",
+    "input": "data:image/svg+xml;base64,PHN2ZyAvPg",
+    "expected": null
+  },
+  {
+    "name": "SVG prefix ASCII whitespace accepted",
+    "fn": "normalize",
+    "input": "CQoMDSA8c3ZnLz4=",
+    "expected": {
+      "mime": "svg",
+      "width": null,
+      "height": null
+    }
+  },
+  {
+    "name": "SVG prefix vertical tab rejected",
+    "fn": "normalize",
+    "input": "CzxzdmcvPg==",
+    "expected": null
+  },
+  {
+    "name": "SVG prefix nonbreaking space byte rejected",
+    "fn": "normalize",
+    "input": "oDxzdmcvPg==",
+    "expected": null
+  },
+  {
+    "name": "data URL base64 marker suffix rejected",
+    "fn": "normalize",
+    "input": "data:image/svg+xml;base64junk,PHN2Zy8+",
+    "expected": null
+  },
+  {
+    "name": "data URL metadata after base64 flag rejected",
+    "fn": "normalize",
+    "input": "data:image/svg+xml;base64;charset=utf-8,PHN2Zy8+",
+    "expected": null
+  },
+  {
+    "name": "data URL metadata before base64 flag accepted",
+    "fn": "normalize",
+    "input": "data:image/svg+xml;charset=utf-8;base64,PHN2Zy8+",
+    "expected": {
+      "mime": "svg",
+      "width": null,
+      "height": null
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "zero height has no signature size",
+    "fn": "signature_size",
+    "fixture": "rect-100x50.png",
+    "height_pt": 0,
+    "expected": null
+  },
+  {
+    "name": "negative height has no signature size",
+    "fn": "signature_size",
+    "fixture": "rect-100x50.png",
+    "height_pt": -1,
+    "expected": null
+  },
+  {
+    "name": "zero width limit has no signature size",
+    "fn": "signature_size",
+    "fixture": "rect-100x50.png",
+    "height_pt": 20,
+    "expected": null,
+    "max_width_pt": 0
+  },
+  {
+    "name": "negative width limit has no signature size",
+    "fn": "signature_size",
+    "fixture": "rect-100x50.png",
+    "height_pt": 20,
+    "expected": null,
+    "max_width_pt": -1
+  },
+  {
+    "name": "finite width clamp survives overflowing natural width",
+    "fn": "signature_size",
+    "fixture": "rect-100x50.png",
+    "height_pt": 1e+308,
+    "max_width_pt": 30,
+    "expected": [
+      30.0,
+      15.0
+    ]
+  },
+  {
+    "name": "overflowing unclamped signature size rejected",
+    "fn": "signature_size",
+    "fixture": "rect-100x50.png",
+    "height_pt": 1e+308,
+    "expected": null
+  }
+]

@@ -19,7 +19,6 @@ The application license must not restrict those library rights. No relinking
 route or object files are required for combined works under the exception.
 
 Previously distributed releases retain their original grants. Version 0.1.4
-retains Apache-2.0; versions 0.1.3 and earlier retain their FSL-1.1-ALv2
-grants. Existing release tags, published archives and already prepared Apache
+retains Apache-2.0. Existing release tags, published archives and already prepared Apache
 release artifacts are not relicensed or replaced. Retained permissive license texts describe those
 materials; they are not alternative grants for new LGPL-covered work.

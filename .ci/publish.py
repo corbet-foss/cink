@@ -10,7 +10,7 @@ import sys
 import tarfile
 import tempfile
 
-REPOSITORY = "corbet-labs/cink"
+REPOSITORY = "corbet-foss/cink"
 LIMIT = 128 * 1024 * 1024
 
 

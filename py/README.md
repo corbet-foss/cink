@@ -2,12 +2,12 @@
 
 **Prepare handwritten signature images for correspondence.**
 
-[![crates.io](https://img.shields.io/crates/v/cink.svg)](https://crates.io/crates/cink) [![npm](https://img.shields.io/npm/v/@corbet-labs/cink.svg)](https://www.npmjs.com/package/@corbet-labs/cink) [![PyPI](https://img.shields.io/pypi/v/cink.svg)](https://pypi.org/project/cink/) [![Rust API](https://docs.rs/cink/badge.svg)](https://docs.rs/cink)
+[![crates.io](https://img.shields.io/crates/v/cink.svg)](https://crates.io/crates/cink) [![npm](https://img.shields.io/npm/v/@corbet-foss/cink.svg)](https://www.npmjs.com/package/@corbet-foss/cink) [![PyPI](https://img.shields.io/pypi/v/cink.svg)](https://pypi.org/project/cink/) [![Rust API](https://docs.rs/cink/badge.svg)](https://docs.rs/cink)
 
 Recognize PNG, JPEG, and SVG input, inspect raster dimensions, calculate an aspect-preserving size, and generate a Typst image call. Runs without an image-decoding library.
 
 ```js
-import { imageSnippet } from '@corbet-labs/cink';
+import { imageSnippet } from '@corbet-foss/cink';
 
 imageSnippet('/signature.png', 31.5);
 // #image("/signature.png", height: 31.5pt)
@@ -20,11 +20,11 @@ imageSnippet('/signature.png', 31.5);
 | Rust / Cargo | `cargo add cink` |
 | Python / pip | `python -m pip install cink` |
 | Python / uv | `uv add cink` |
-| Node.js / npm | `npm install @corbet-labs/cink` |
-| pnpm | `pnpm add @corbet-labs/cink` |
-| Yarn | `yarn add @corbet-labs/cink` |
-| Bun | `bun add @corbet-labs/cink` |
-| Deno | `deno add npm:@corbet-labs/cink` |
+| Node.js / npm | `npm install @corbet-foss/cink` |
+| pnpm | `pnpm add @corbet-foss/cink` |
+| Yarn | `yarn add @corbet-foss/cink` |
+| Bun | `bun add @corbet-foss/cink` |
+| Deno | `deno add npm:@corbet-foss/cink` |
 
 The 0.1.4 JavaScript distribution includes compiled ESM, CommonJS,
 TypeScript declarations, and a standalone browser module. Node.js 20+ is
@@ -32,18 +32,18 @@ supported; no TypeScript loader is required.
 
 ```js
 // CommonJS
-const { imageSnippet } = require('@corbet-labs/cink');
+const { imageSnippet } = require('@corbet-foss/cink');
 ```
 
 ```html
 <script type="module">
-  import { imageSnippet } from 'https://cdn.jsdelivr.net/npm/@corbet-labs/cink@0.1.4/dist/browser.js';
+  import { imageSnippet } from 'https://cdn.jsdelivr.net/npm/@corbet-foss/cink@0.1.4/dist/browser.js';
   console.log(imageSnippet('/signature.png', 31.5));
 </script>
 ```
 
 Python 3.10+ packages are available on [PyPI](https://pypi.org/project/cink/).
-See the [installation guide](https://github.com/corbet-labs/cink/blob/main/docs/installation.md)
+See the [installation guide](https://github.com/corbet-foss/cink/blob/main/docs/installation.md)
 for CLI commands and other distribution options.
 JSR publication and Typst availability are listed there explicitly.
 
@@ -81,32 +81,32 @@ PNG and JPEG dimensions are read from headers; this is not a full raster integri
 
 | Library | Responsibility |
 | --- | --- |
-| [cletter](https://github.com/corbet-labs/cletter) | Compose the correspondence helpers |
-| [cgreet](https://github.com/corbet-labs/cgreet) | German salutations and titles |
-| [cfarewell](https://github.com/corbet-labs/cfarewell) | Locale-specific closings |
-| [cdate](https://github.com/corbet-labs/cdate) | Calendar-date formatting |
-| [cink](https://github.com/corbet-labs/cink) | Handwritten signature images |
+| [cletter](https://github.com/corbet-foss/cletter) | Compose the correspondence helpers |
+| [cgreet](https://github.com/corbet-foss/cgreet) | German salutations and titles |
+| [cfarewell](https://github.com/corbet-foss/cfarewell) | Locale-specific closings |
+| [cdate](https://github.com/corbet-foss/cdate) | Calendar-date formatting |
+| [cink](https://github.com/corbet-foss/cink) | Handwritten signature images |
 
 
 ## Development
 
-Behavior is defined by [the signature limits](https://github.com/corbet-labs/cink/tree/main/tables)
-and [shared conformance vectors](https://github.com/corbet-labs/cink/tree/main/tests/vectors).
+Behavior is defined by [the signature limits](https://github.com/corbet-foss/cink/tree/main/tables)
+and [shared conformance vectors](https://github.com/corbet-foss/cink/tree/main/tests/vectors).
 Rust, JavaScript, and Python run the same vectors. Selected CI checks exercise
 installed JavaScript tarballs, Python wheels and command-line entrypoints, and
 Typst packages. Release validation records the actual runtime and platform;
 Linux results do not establish native Windows or macOS coverage.
 All five Rust crates forbid unsafe code in their own source.
 
-See [the release guide](https://github.com/corbet-labs/cink/blob/main/docs/releasing.md)
+See [the release guide](https://github.com/corbet-foss/cink/blob/main/docs/releasing.md)
 for generation, verification, and publication commands.
 
 ## License
 
 Copyright 2026 Julian Y. Richard Corbet. The 0.2.0 release line is licensed
-under [LGPL-3.0-only](https://github.com/corbet-labs/cink/blob/main/LICENSES/LGPL-3.0-only.txt)
-[WITH LGPL-3.0-linking-exception](https://github.com/corbet-labs/cink/blob/main/LICENSES/LGPL-3.0-only%20WITH%20LGPL-3.0-linking-exception.txt),
-with the incorporated [GPL version 3](https://github.com/corbet-labs/cink/blob/main/LICENSES/GPL-3.0-only.txt).
+under [LGPL-3.0-only](https://github.com/corbet-foss/cink/blob/main/LICENSES/LGPL-3.0-only.txt)
+[WITH LGPL-3.0-linking-exception](https://github.com/corbet-foss/cink/blob/main/LICENSES/LGPL-3.0-only%20WITH%20LGPL-3.0-linking-exception.txt),
+with the incorporated [GPL version 3](https://github.com/corbet-foss/cink/blob/main/LICENSES/GPL-3.0-only.txt).
 Combined works may link statically or dynamically without relinking duties;
 library modifications stay LGPL. Applications can use a different license
 subject to the LGPL's conditions.
@@ -114,5 +114,5 @@ Version 0.1.4 retains Apache-2.0; versions 0.1.3 and earlier retain their
 FSL-1.1-ALv2 grants. The installation examples above refer to those available
 releases; 0.2.0 has not yet been published to registries.
 
-See the [licensing notes](https://github.com/corbet-labs/cink/blob/main/LICENSE.md) for distribution conditions and retained notices.
-Contributions use the [Contributor License Agreement](https://github.com/corbet-labs/cink/blob/main/CLA.md).
+See the [licensing notes](https://github.com/corbet-foss/cink/blob/main/LICENSE.md) for distribution conditions and retained notices.
+Contributions use the [Contributor License Agreement](https://github.com/corbet-foss/cink/blob/main/CLA.md).

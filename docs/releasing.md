@@ -5,7 +5,7 @@ typst.toml versions consistent. Published contents are immutable: use a new
 version for corrections.
 
 1. Update versions and CHANGELOG.md, then regenerate canonical tables with
-   `bash js/@corbet-labs/cink/scripts/sync-assets.sh`.
+   `bash js/@corbet-foss/cink/scripts/sync-assets.sh`.
 2. Commit the complete release source. Select affected checks using
    [the CI command guide](../.ci/README.md). Package checks build each archive
    once, install it in an isolated consumer, and export its SHA-256 digest,

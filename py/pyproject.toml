@@ -15,9 +15,9 @@ classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS In
 
 
 [project.urls]
-Homepage = "https://github.com/corbet-labs/cink#readme"
-Repository = "https://github.com/corbet-labs/cink"
-Issues = "https://github.com/corbet-labs/cink/issues"
+Homepage = "https://github.com/corbet-foss/cink#readme"
+Repository = "https://github.com/corbet-foss/cink"
+Issues = "https://github.com/corbet-foss/cink/issues"
 
 [project.scripts]
 cink = "cink.__main__:main"

@@ -53,7 +53,7 @@ with zipfile.ZipFile(args.wheel) as wheel:
     check(len(metadata_paths) == 1, "Expected one wheel distribution")
     metadata = BytesParser().parsebytes(wheel.read(metadata_paths[0]))
     check(metadata["Name"] == NAME, "Wheel package name differs from repository")
-    expected_license = json.loads((ROOT / "js" / "@corbet-labs" / NAME / "package.json").read_text())["license"]
+    expected_license = json.loads((ROOT / "js" / "@corbet-foss" / NAME / "package.json").read_text())["license"]
     check(metadata["License-Expression"] == expected_license, "Wheel license differs from repository")
     for name, expected in licenses.items():
         check(any(path.endswith("/LICENSES/" + name) and wheel.read(path) == expected for path in files),

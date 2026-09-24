@@ -2,12 +2,12 @@
 
 **Prepare handwritten signature images for correspondence.**
 
-[![crates.io](https://img.shields.io/crates/v/cink.svg)](https://crates.io/crates/cink) [![npm](https://img.shields.io/npm/v/@corbet-foss/cink.svg)](https://www.npmjs.com/package/@corbet-foss/cink) [![PyPI](https://img.shields.io/pypi/v/cink.svg)](https://pypi.org/project/cink/) [![Rust API](https://docs.rs/cink/badge.svg)](https://docs.rs/cink)
+[![crates.io](https://img.shields.io/crates/v/cink.svg)](https://crates.io/crates/cink) [![npm](https://img.shields.io/npm/v/@corbet-labs/cink.svg)](https://www.npmjs.com/package/@corbet-labs/cink) [![PyPI](https://img.shields.io/pypi/v/cink.svg)](https://pypi.org/project/cink/) [![Rust API](https://docs.rs/cink/badge.svg)](https://docs.rs/cink)
 
 Recognize PNG, JPEG, and SVG input, inspect raster dimensions, calculate an aspect-preserving size, and generate a Typst image call. Runs without an image-decoding library.
 
 ```js
-import { imageSnippet } from '@corbet-foss/cink';
+import { imageSnippet } from '@corbet-labs/cink';
 
 imageSnippet('/signature.png', 31.5);
 // #image("/signature.png", height: 31.5pt)
@@ -20,11 +20,11 @@ imageSnippet('/signature.png', 31.5);
 | Rust / Cargo | `cargo add cink` |
 | Python / pip | `python -m pip install cink` |
 | Python / uv | `uv add cink` |
-| Node.js / npm | `npm install @corbet-foss/cink` |
-| pnpm | `pnpm add @corbet-foss/cink` |
-| Yarn | `yarn add @corbet-foss/cink` |
-| Bun | `bun add @corbet-foss/cink` |
-| Deno | `deno add npm:@corbet-foss/cink` |
+| Node.js / npm | `npm install @corbet-labs/cink` |
+| pnpm | `pnpm add @corbet-labs/cink` |
+| Yarn | `yarn add @corbet-labs/cink` |
+| Bun | `bun add @corbet-labs/cink` |
+| Deno | `deno add npm:@corbet-labs/cink` |
 
 The 0.1.4 JavaScript distribution includes compiled ESM, CommonJS,
 TypeScript declarations, and a standalone browser module. Node.js 20+ is
@@ -32,12 +32,12 @@ supported; no TypeScript loader is required.
 
 ```js
 // CommonJS
-const { imageSnippet } = require('@corbet-foss/cink');
+const { imageSnippet } = require('@corbet-labs/cink');
 ```
 
 ```html
 <script type="module">
-  import { imageSnippet } from 'https://cdn.jsdelivr.net/npm/@corbet-foss/cink@0.1.4/dist/browser.js';
+  import { imageSnippet } from 'https://cdn.jsdelivr.net/npm/@corbet-labs/cink@0.1.4/dist/browser.js';
   console.log(imageSnippet('/signature.png', 31.5));
 </script>
 ```

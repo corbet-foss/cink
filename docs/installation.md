@@ -8,7 +8,7 @@ license grants; this change does not replace their artifacts.
 
 Use Cargo for Rust and npm, pnpm, Yarn, or Bun for JavaScript. These JavaScript
 package managers share the npm registry; each consumes the same package.
-Deno can use `npm:@corbet-foss/cink`. The browser export bundles runtime
+Deno can use `npm:@corbet-labs/cink`. The browser export bundles runtime
 dependencies and needs no import map. The declared Rust minimum is 1.94. Release checks use the worker's current stable compiler; a separate minimum-version check is required to
 verify that lower bound.
 
@@ -52,10 +52,10 @@ Verified wheels and source distributions are also attached to the
 ## JSR
 
 The 0.2.0 release targets
-[`@corbet-foss/cink`](https://jsr.io/@corbet-foss/cink@0.2.0):
+[`@corbet-labs/cink`](https://jsr.io/@corbet-labs/cink@0.2.0):
 
 ```sh
-deno add jsr:@corbet-foss/cink@0.2.0
+deno add jsr:@corbet-labs/cink@0.2.0
 ```
 
 ## Typst

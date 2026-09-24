@@ -1,5 +1,5 @@
 {
-  "name": "@corbet-foss/cink",
+  "name": "@corbet-labs/cink",
   "version": "0.2.0",
   "description": "Handwritten signature image rendering for correspondence. Pixels, not signatures. Mirrors the cink Rust crate release line.",
   "license": "LGPL-3.0-only WITH LGPL-3.0-linking-exception",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/corbet-foss/cink.git",
-    "directory": "js/@corbet-foss/cink"
+    "directory": "js/@corbet-labs/cink"
   },
   "type": "module",
   "main": "./dist/index.cjs",

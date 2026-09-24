@@ -103,15 +103,15 @@ for generation, verification, and publication commands.
 
 ## License
 
-Copyright 2026 Julian Y. Richard Corbet. The 0.2.0 release line is licensed
+Copyright 2026 Julian Y. Richard Corbet. The 0.2.1 release line is licensed
 under [LGPL-3.0-only](https://github.com/corbet-foss/cink/blob/main/LICENSES/LGPL-3.0-only.txt)
-[WITH LGPL-3.0-linking-exception](https://github.com/corbet-foss/cink/blob/main/LICENSES/LGPL-3.0-only%20WITH%20LGPL-3.0-linking-exception.txt),
+[WITH LGPL-3.0-linking-exception](https://github.com/corbet-foss/cink/blob/main/LICENSES/LGPL-3.0-linking-exception.txt),
 with the incorporated [GPL version 3](https://github.com/corbet-foss/cink/blob/main/LICENSES/GPL-3.0-only.txt).
 Combined works may link statically or dynamically without relinking duties;
 library modifications stay LGPL. Applications can use a different license
 subject to the LGPL's conditions.
 Version 0.1.4 retains Apache-2.0. The installation examples above refer to those available
-releases; 0.2.0 has not yet been published to registries.
+releases; 0.2.1 is published to registries.
 
 See the [licensing notes](https://github.com/corbet-foss/cink/blob/main/LICENSE.md) for distribution conditions and retained notices.
 Contributions use the [Contributor License Agreement](https://github.com/corbet-foss/cink/blob/main/CLA.md).

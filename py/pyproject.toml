@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cink"
-version = "0.2.0"
+version = "0.2.1"
 description = "Handwritten signature image rendering for correspondence. Pixels, not signatures"
 readme = "README.md"
 license = "LGPL-3.0-only WITH LGPL-3.0-linking-exception"
